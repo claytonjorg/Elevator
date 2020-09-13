@@ -79,3 +79,23 @@ You will also need to print the following for each floor of the building:
 # 4: Test
 Once you've implemented your system calls, you must interact with two provided user-space
 applications that will allow communication with your kernel module.
+
+producer.c
+This program will issue N random requests, specified by input.
+
+consumer.c <--start | --stop>
+This program expects one flag and on argument:
+• If the flag is --start, then the program must start the elevator
+• If the flag is --stop, then the program must stop the elevator
+
+# How To
+sudo make
+sudo make insert
+sudo make watch_proc
+sudo make issue
+sudo make stop
+sudo make remove
+sudo make clean
+
+# Known Bugs
+Elevator does not got to IDLE state when the wait line queue is empty
