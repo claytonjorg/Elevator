@@ -16,7 +16,7 @@ in the opposite direction from where they wish to go. Once they board the elevat
 only get off when the elevator arrives at the destination. Passengers will wait on floors to be
 serviced indefinitely.
 
-# Step 1: Kernel Module with an Elevator
+# 1: Kernel Module with an Elevator
 Develop a representation of an elevator. In this project, you will be required to support having a
 maximum load of 15 weight units and 10 passenger units (neither can be exceeded at any
 point). The elevator must wait for 2.0 seconds when moving between floors, and it must wait
@@ -24,7 +24,7 @@ for 1.0 seconds while loading/unloading passengers. The building has floor 1 bei
 minimum floor number and floor 10 being the maximum floor number. New passengers can
 arrive at any time and each floor needs to support an arbitrary number of them.
 
-# Step 2: Add System Calls
+# 2: Add System Calls
 Once you have a kernel module, you must modify the kernel by adding three system calls.
 These calls will be used by a user-space application to control your elevator and create
 passengers. You need to assign the system calls the following numbers:
@@ -59,7 +59,7 @@ it must offload all of its current passengers. Only after the elevator is empty 
 deactivated (state = OFFLINE). This function returns 1 if the elevator is already in the process
 of deactivating, and 0 otherwise.
 
-# Step 3: /Proc
+# 3: /Proc
 The module must provide a proc entry named /proc/elevator. Here, you will need to
 print the following (each labeled appropriately):
 The elevator's movement state:
@@ -76,6 +76,6 @@ You will also need to print the following for each floor of the building:
 ◦ The load of the waiting passengers
 ◦ The total number of passengers that have been serviced
 
-# Step 4: Test
+# 4: Test
 Once you've implemented your system calls, you must interact with two provided user-space
 applications that will allow communication with your kernel module.
