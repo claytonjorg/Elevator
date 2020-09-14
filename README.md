@@ -88,7 +88,7 @@ consumer.c <--start | --stop>
 - If the flag is --start, then the program must start the elevator
 - If the flag is --stop, then the program must stop the elevator
 
-# How To
+### How To
 - sudo make
 - sudo make insert
 - sudo make watch_proc
@@ -97,5 +97,5 @@ consumer.c <--start | --stop>
 - sudo make remove
 - sudo make clean
 
-# Known Bugs
+### Known Bugs
 - Elevator does not got to IDLE state when the wait line queue is empty
