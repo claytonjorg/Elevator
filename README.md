@@ -1,9 +1,7 @@
 # Elevator
 
 ### Authors
-- Clayton Jorgensen
-- Tristan Garcia
-- John Lajoie
+Clayton Jorgensen, Tristan Garcia, & John Lajoie
 
 ### 1: Intro
 Implementation of a scheduling algorithm for a hotel elevator. The elevator tracks
