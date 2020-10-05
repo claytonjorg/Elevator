@@ -1,5 +1,6 @@
 # Elevator
 
+### Authors
 - Clayton Jorgensen
 - Tristan Garcia
 - John Lajoie
