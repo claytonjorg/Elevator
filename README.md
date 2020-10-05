@@ -1,8 +1,8 @@
 # Elevator
 
-Clayton Jorgensen
-Tristan Garcia
-John Lajoie
+- Clayton Jorgensen
+- Tristan Garcia
+- John Lajoie
 
 ### Intro
 Implementation of a scheduling algorithm for a hotel elevator. The elevator tracks
