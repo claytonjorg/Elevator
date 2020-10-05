@@ -5,7 +5,7 @@
 - Tristan Garcia
 - John Lajoie
 
-### Intro
+### 1: Intro
 Implementation of a scheduling algorithm for a hotel elevator. The elevator tracks
 the number of passengers and the total weight. Elevator load consists of four types of people:
 adults, children, room service, and bellhops:
@@ -22,18 +22,16 @@ in the opposite direction from where they wish to go. Once they board the elevat
 only get off when the elevator arrives at the destination. Passengers will wait on floors to be
 serviced indefinitely.
 
-### 1: Kernel Module with an Elevator
-Develop a representation of an elevator. In this project, you will be required to support having a
-maximum load of 15 weight units and 10 passenger units (neither can be exceeded at any
-point). The elevator must wait for 2.0 seconds when moving between floors, and it must wait
+### 2: Kernel Module with an Elevator
+Elevator supports having a maximum load of 15 weight units and 10 passenger units (neither can be exceeded at any
+point). The elevator will wait for 2.0 seconds when moving between floors, and it will wait
 for 1.0 seconds while loading/unloading passengers. The building has floor 1 being the
 minimum floor number and floor 10 being the maximum floor number. New passengers can
-arrive at any time and each floor needs to support an arbitrary number of them.
+arrive at any time and each floor supports an arbitrary number of them.
 
-### 2: Add System Calls
-Once you have a kernel module, you must modify the kernel by adding three system calls.
-These calls will be used by a user-space application to control your elevator and create
-passengers. You need to assign the system calls the following numbers:
+### 3: Add System Calls
+These system calls will be used by a user-space application to control your elevator and create
+passengers. Assign the system calls to the following numbers:
 - 335 for start_elevator()
 - 336 for issue_request()
 - 337 for stop_elevator()
@@ -47,8 +45,7 @@ allocate memory). Initialize an elevator as follows:
 - Current floor: 1
 - Current load: 0 passenger units, 0 weight units
 
-###### int issue_request(int passenger_type, int start_floor, int
-destination_floor)
+###### int issue_request(int passenger_type, int start_floor, int destination_floor)
 Description: Creates a passenger of type passenger_type at start_floor that wishes
 to go to destination_floor. This function returns 1 if the request is not valid (one of the
 variables is out of range), and 0 otherwise. A passenger type can be translated to an int as
@@ -65,9 +62,8 @@ it must offload all of its current passengers. Only after the elevator is empty 
 deactivated (state = OFFLINE). This function returns 1 if the elevator is already in the process
 of deactivating, and 0 otherwise.
 
-### 3: /Proc
-The module must provide a proc entry named /proc/elevator. Here, you will need to
-print the following (each labeled appropriately):
+### 4: /Proc
+Create a proc entry named /proc/elevator. 
 The elevator's movement state:
 - OFFLINE: when the module is installed but the elevator isn’t running (initial state)
 - IDLE: elevator is stopped on a floor because there are no more passengers to service
@@ -75,17 +71,14 @@ The elevator's movement state:
 - UP: elevator is moving from a lower floor to a higher floor
 - DOWN: elevator is moving from a higher floor to a lower floor
 
+Output:
 - The current floor the elevator is on
 - The next floor the elevator intends to service
 - The elevator's current load (in terms of both passengers units and weight units)
-You will also need to print the following for each floor of the building:
 - The load of the waiting passengers
 - The total number of passengers that have been serviced
 
-### 4: Test
-Once you've implemented your system calls, you must interact with two provided user-space
-applications that will allow communication with your kernel module.
-
+### 5: Test
 producer.c
 - This program will issue N random requests, specified by input.
 
