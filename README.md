@@ -1,5 +1,10 @@
 # Elevator
 
+Clayton Jorgensen
+Tristan Garcia
+John Lajoie
+
+### Intro
 Implementation of a scheduling algorithm for a hotel elevator. The elevator tracks
 the number of passengers and the total weight. Elevator load consists of four types of people:
 adults, children, room service, and bellhops:
@@ -99,3 +104,6 @@ consumer.c <--start | --stop>
 
 ### Known Bugs
 - Elevator does not got to IDLE state when the wait line queue is empty
+
+### Important Notes
+- producer.c & consumer.c were provided test files and I claim no ownership of said files.
