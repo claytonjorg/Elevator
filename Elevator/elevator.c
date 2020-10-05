@@ -447,7 +447,7 @@ long start_elevator(void)
 	}
 	else
 	{
-		return 3; //suppose to be -ERRORNUM but not sure how to do that yet
+		return -ERRORNUM;
 	}
 }
 
