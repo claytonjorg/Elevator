@@ -1,6 +1,6 @@
 # Elevator
 
-Your task is to implement a scheduling algorithm for a hotel elevator. Your elevator must track
+Implementation of a scheduling algorithm for a hotel elevator. The elevator tracks
 the number of passengers and the total weight. Elevator load consists of four types of people:
 adults, children, room service, and bellhops:
 - An adult counts as 1 passenger unit and 1 weight unit
@@ -8,8 +8,8 @@ adults, children, room service, and bellhops:
 - Room service counts as 2 passenger units and 2 weight units
 - A bellhop counts as 2 passengers unit and 4 weight unit
 
-Passengers will appear on a floor of their choosing and always know where they wish to go. You
-can assume most of the time when a passenger is on a floor other than the first, they will
+Passengers will appear on a floor of their choosing and always know where they wish to go. Assumes 
+most of the time when a passenger is on a floor other than the first, they will
 choose to go to the first floor (for optimization purposes). Passengers board the elevator in
 FIFO order. If a passenger can fit, the elevator must accept them unless the elevator is moving
 in the opposite direction from where they wish to go. Once they board the elevator, they may
