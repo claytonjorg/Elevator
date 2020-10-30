@@ -98,4 +98,4 @@ consumer.c <--start | --stop>
 - Elevator does not got to IDLE state when the wait line queue is empty
 
 ### Important Notes
-- producer.c & consumer.c were provided test files and claim no ownership of said files.
+- producer.c & consumer.c were provided test files and I claim no ownership of said files.
